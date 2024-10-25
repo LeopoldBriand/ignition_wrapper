@@ -1,5 +1,11 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "Android Development",
+  "image": "mcr.microsoft.com/vscode/devcontainers/java:0-11",
   "features": {
-  }
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "11"
+    },
+    "ghcr.io/devcontainers/features/android-sdk:1": {}
+  },
+  "postCreateCommand": "./setup-android-sdk.sh"
 }
