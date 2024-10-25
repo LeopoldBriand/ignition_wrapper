@@ -1,17 +1,15 @@
 {
-  "name": "Android Development",
-  "image": "mcr.microsoft.com/devcontainers/base:focal",
-  "features": {
-    "ghcr.io/devcontainers/features/java:1": {
-			"version": "11",
+	  "name": "Android Development",
+	  "image": "mcr.microsoft.com/devcontainers/universal:2",
+	  "features": {
+	    	"ghcr.io/devcontainers/features/java:1": {
+			"version": "17",
 			"jdkDistro": "open",
 			"gradleVersion": "latest"
 		},
-    "ghcr.io/jarrodcolburn/features/android-sdk:0": {
-			"emulator": true,
-			"platforms": "33",
-			"build-tools": "33.0.2"
+	    	"ghcr.io/CASL0/devcontainer-features/android-sdk:1": {
+			"installNdk": true
 		}
-  },
-  "postCreateCommand": "./setup-android-sdk.sh"
+	  },
+	  "postCreateCommand": "./setup-android-sdk.sh"
 }
